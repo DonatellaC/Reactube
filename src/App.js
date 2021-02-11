@@ -4,7 +4,6 @@ import SearchBar from "./components/SearchBar";
 import VideoDetail from "./components/VideoDetail";
 import VideoList from "./components/VideoList";
 import youtube from "./apis/youtube";
-
 class App extends React.Component {
   state = {
     videos: [],
@@ -36,8 +35,8 @@ class App extends React.Component {
           <h1>Reactube</h1>
         </header>
         <div>
-          <SearchBar handleSubmit={this.handleSubmit} />
-          <VideoList handleVideoSelect={this.handleVideoSelect} />
+          <SearchBar onFormSubmit={this.handleSubmit} />
+          <VideoList />
           <VideoDetail />
         </div>
       </div>
