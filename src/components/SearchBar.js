@@ -25,7 +25,7 @@ class SearchBar extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="input-group">
             <input
-              type="search"
+              type="text"
               placeholder="What are you searching for?"
               aria-describedby="button-addon1"
               className="form-control border-0 bg-light"
