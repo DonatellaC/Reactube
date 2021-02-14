@@ -1,9 +1,22 @@
 import React from "react";
 
-export default function VideoDetail() {
+const VideoDetail = ({ video }) => {
+  if (!video) {
+    return <div>Loading ...</div>;
+  }
+
+  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+
   return (
     <div>
       <h1>Video Detail</h1>
+      <iframe src={videoSrc} allowFullScreen title='Video player' />
+      <div>
+        <h4 >{video.snippet.title}</h4>
+        <p>{video.snippet.description}</p>
+      </div>
     </div>
   );
 }
+
+export default VideoDetail
