@@ -20,6 +20,7 @@ class App extends React.Component {
       videos: response.data.items,
       selectedVideo: response.data.items[0].id.videoId,
     });
+    // console.log(this.state.videos);
   };
 
   handleVideoSelect = (video) => {
@@ -36,7 +37,7 @@ class App extends React.Component {
         </header>
         <div>
           <SearchBar onFormSubmit={this.handleSubmit} />
-          <VideoList />
+          <VideoList videos={this.videos} handleVideoSelect={this.handleVideoSelect} />
           <VideoDetail />
         </div>
       </div>
