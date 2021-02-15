@@ -2,14 +2,13 @@ import React from "react";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <div>Loading ...</div>;
+    return <div></div>;
   }
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   return (
     <div>
-      <h1>Video Detail</h1>
       <iframe src={videoSrc} allowFullScreen title='Video player' />
       <div>
         <h4 >{video.snippet.title}</h4>
@@ -20,3 +19,4 @@ const VideoDetail = ({ video }) => {
 }
 
 export default VideoDetail
+

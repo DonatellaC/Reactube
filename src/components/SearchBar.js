@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-
 class SearchBar extends React.Component {
   state = {
     term: "",
@@ -28,7 +27,7 @@ class SearchBar extends React.Component {
               type="text"
               placeholder="What are you searching for?"
               aria-describedby="button-addon1"
-              className="form-control border-0 bg-light"
+              className="form-control border-0"
               onChange={this.handleChange}
               value={this.state.term}
             />
@@ -47,3 +46,5 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
+
+

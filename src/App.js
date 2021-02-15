@@ -29,14 +29,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <header>
-          <h1>Reactube</h1>
-        </header>
-        <div>
+      <div className="container-fluid">
+        <div className="searchBar">
           <SearchBar onFormSubmit={this.handleSubmit} />
-          <VideoList videos={this.state.videos} handleVideoSelect={this.handleVideoSelect} />
-          <VideoDetail video={this.state.selectedVideo} />
+        </div>
+        <div className="videos">
+          <div className="row">
+            <div className="col-8">
+              <div className="videoDetail">
+                <VideoDetail video={this.state.selectedVideo} />
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="videoList">
+                <VideoList videos={this.state.videos} handleVideoSelect={this.handleVideoSelect} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -44,3 +53,4 @@ class App extends React.Component {
 }
 
 export default App;
+
