@@ -2,9 +2,9 @@ import React from "react";
 
 const VideoItem = ({ video, handleVideoSelect }) => {
     return (
-        <div className="videoItem" onClick={() => handleVideoSelect(video)}>
-            <img className="videoItemImg" src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} />
-            <div className="videoItemTitle">{video.snippet.title}</div>
+        <div className="videoItem row" onClick={() => handleVideoSelect(video)}>
+            <img className="videoItemImg col-7" src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} />
+            <div className="videoItemTitle col-5">{video.snippet.title}</div>
         </div>
     );
 }

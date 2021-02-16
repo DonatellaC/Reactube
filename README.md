@@ -2,6 +2,8 @@
 
 Youtube clone using React
 
+![Img](./images/main.png)
+
 ## 📌 Getting started
 
 ```instruction
@@ -12,7 +14,7 @@ Youtube clone using React
 - npm install axios
 ```
 
-![Img](./images/Img.png)
+![Img](./images/img.png)
 
 ## 📌 Instructions
 
