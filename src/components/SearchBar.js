@@ -1,4 +1,5 @@
 import React from "react";
+import { Paper, TextField } from "@material-ui/core";
 import "../App.css";
 class SearchBar extends React.Component {
   state = {
@@ -21,25 +22,16 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <div className="input-group">
-            <input
-              type="text"
-              placeholder="What are you searching for?"
-              aria-describedby="button-addon1"
-              className="form-control border-0"
+        <Paper elevation={6} style={{ padding: "15px" }}>
+          <form onSubmit={this.handleSubmit}>
+            <TextField
+              label="What are you searching for?"
+              fullWidth
               onChange={this.handleChange}
               value={this.state.term}
             />
-            <button
-              id="button-addon1"
-              type="submit"
-              className="btn btn-link text-primary"
-            >
-              <i className="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
-        </form>
+          </form>
+        </Paper>
       </div>
     );
   }

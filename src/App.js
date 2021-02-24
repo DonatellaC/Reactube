@@ -1,4 +1,5 @@
 import React from "react";
+import { Grid } from "@material-ui/core";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
 import VideoDetail from "./components/VideoDetail";
@@ -29,28 +30,28 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="searchBar">
-          <SearchBar onFormSubmit={this.handleSubmit} />
-        </div>
-        <div className="videos">
-          <div className="row">
-            <div className="col-8">
-              <div className="videoDetail">
+      <div>
+        <Grid container justify="center" alignItems="center">
+          <Grid item xs={11}>
+            <Grid container spacing={8}>
+              <Grid item xs={12}>
+                <SearchBar onFormSubmit={this.handleSubmit} />
+              </Grid>
+              <Grid item xs={8} className="videoDetail">
                 <VideoDetail video={this.state.selectedVideo} />
-              </div>
-            </div>
-            <div className="col-4">
-              <div className="videoList">
-                <VideoList videos={this.state.videos} handleVideoSelect={this.handleVideoSelect} />
-              </div>
-            </div>
-          </div>
-        </div>
+              </Grid>
+              <Grid item xs={4}>
+                <VideoList
+                  videos={this.state.videos}
+                  handleVideoSelect={this.handleVideoSelect}
+                />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
       </div>
     );
   }
 }
 
 export default App;
-
